@@ -1,0 +1,16 @@
+{
+    "name": "dolgo/backend",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "functions/helpers.php",
+            "functions/core.php"
+        ]
+    },
+    "require": {
+        "php": "8.4.4",
+        "ext-pdo": "*"
+    }
+}

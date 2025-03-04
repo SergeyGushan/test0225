@@ -1,0 +1,31 @@
+<?php
+
+use App\App;
+
+require __DIR__ . '/vendor/autoload.php';
+
+if ($argc < 2) {
+    error("Enter command name", true);
+}
+
+$commandMame = $argv[1];
+$commandArg = array_slice($argv, 2);
+
+try {
+    App::command($commandMame, ...$commandArg);
+}catch (Throwable $e) {
+    error($e->getMessage(), true);
+}
+
+
+function error(string $message, bool $andDie = false): void
+{
+    echo "\033[31m" . $message . "\033[0m" . PHP_EOL;
+
+    if ($andDie) {
+        die(1);
+    }
+}
+
+
+

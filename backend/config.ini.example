@@ -1,0 +1,11 @@
+routes_path=
+migrations_patch=
+
+frontend_url=
+
+db_host_port=
+db_host=
+db_pass=
+db_name=
+db_connection=
+db_charset=
